@@ -1,0 +1,15 @@
+.container {
+    @include flex($justify: center);
+}
+
+.recipeRandomHeader {
+    display: flex;
+    justify-content: space-between;
+
+    .linkDetail {
+        text-decoration: none;
+        color: $secondary;
+        font-size: 18px;
+    }
+
+}

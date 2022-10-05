@@ -1,0 +1,40 @@
+
+.custom-footer {
+    left:0px;
+    bottom:0;
+    position: fixed;
+    height:10vh;
+    width: 100%;
+    @include flex($justify: space-between, $align: center);
+    background-color: $tertiary;
+
+    li {
+        list-style: none;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        color: $primary;
+    }
+
+}
+
+.link-social ul{
+    font-size: 2rem;
+    @include flex($wrap: wrap, $justify: center);
+    color: $primary;
+}
+
+.list-link ul {
+    font-size: 1.5rem;
+}
+
+.link-custom {
+    color: $primary;
+    text-decoration: none;
+}
+
+.link-custom:active {
+    color: $secondary;
+}
