@@ -16,7 +16,6 @@ const Home = () => {
     dispatch(getRecipeRandom())
   }, [dispatch]) 
 
-  console.log(recipeRandom);
 
   return (
     <div className='container'>

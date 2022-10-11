@@ -37,13 +37,14 @@ export function getDetail(id) {
     }
 }
 
-export function getTypes() {
+export function getTypes(categoryName) {
     return async function (dispatch) {
-        return axios.get(`${process.env.REACT_APP_FOOD}/categories.php`).then((response) => {
+        return axios.get(`${process.env.REACT_APP_FOOD}/filter.php?c=`+categoryName).then((response) => {
+            console.log(response.data.meals);
             dispatch({
                 type: RECIPES_TYPES,
-                payload: response.data.categories
-            })
+                payload: response.data.meals
+            }) 
         }).catch((error) => console.log(`${process.env.REACT_APP_FOOD}/random.php`, error));
     }
 }

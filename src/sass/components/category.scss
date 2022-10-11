@@ -1,0 +1,37 @@
+.containerCategory {
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+
+
+    .recipeCategory {
+
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 20px;
+
+        img {
+            width: 70%;
+            height: 30vh;
+        }
+
+    }
+}
+
+.containerLinkCategory {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.link-category {
+
+    @include flex(column, nowrap, center, center);
+
+    .iconCategory {
+        width: 200px;
+        height: 200px;
+        border-radius:150px;
+    }
+}

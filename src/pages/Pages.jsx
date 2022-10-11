@@ -10,6 +10,7 @@ import Category from './Category';
 import Header from '../components/Header';
 import Footer from "../components/Footer";
 import Detail from './Detail';
+import CategoryList from '../components/CategoryList';
 
 
 const Pages = () => {
@@ -22,7 +23,8 @@ const Pages = () => {
         <Routes>
             <Route path='/' element={ <Home /> } /> 
             <Route path='/about-us' element={ <AboutUs /> } />
-            <Route path='/categories' element={ <Category /> } />
+            <Route path='/categories' element={ <CategoryList /> } />
+            <Route path='/categories/:categoryName' element={ <Category /> } />
             <Route path='/areas' element={ <Area /> } />
             <Route path='/detail/:id' element={ <Detail /> } />
 
