@@ -1,8 +1,5 @@
 .containerCategory {
-
-    display: flex;
-    flex-wrap: wrap;
-    margin: 20px;
+    @include flex($wrap: wrap, $gap: 20px);
 
 
     .recipeCategory {
@@ -20,18 +17,19 @@
 }
 
 .containerLinkCategory {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+    width: 100%;
+    @include flex($wrap: wrap, $gap: 20px);
+    padding: 2rem;
+    @include link;
 
-.link-category {
+    .link-category {
 
-    @include flex(column, nowrap, center, center);
-
-    .iconCategory {
-        width: 200px;
-        height: 200px;
-        border-radius:150px;
+        @include flex(column, nowrap, center, center);
+    
+        .iconCategory {
+            width: 200px;
+            height: 200px;
+            border-radius:150px;
+        }
     }
 }
