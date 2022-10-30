@@ -1,15 +1,12 @@
 .containerCategory {
-    @include flex($wrap: wrap, $gap: 20px);
-
+    @include flex($wrap: wrap, $gap: 50px);
+    padding: 1.5rem;
 
     .recipeCategory {
 
-    display: flex;
-    flex-wrap: nowrap;
-    margin: 20px;
+    @include flex($direction: column, $justify: center, $align: center, $gap: 20px);
 
         img {
-            width: 70%;
             height: 30vh;
         }
 
