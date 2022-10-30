@@ -11,3 +11,8 @@
     color: black;
     text-decoration: none;
 }
+
+@mixin borderGreen() {
+    border: 15px dashed $letters;
+    border-width: 2px;
+}

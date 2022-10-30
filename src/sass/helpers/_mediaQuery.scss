@@ -3,3 +3,9 @@
         position: fixed
     }
 }
+
+@mixin mediaQuery($value: 0){
+    @media screen and (max-width : $value){
+        @content;
+    }
+}

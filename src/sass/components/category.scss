@@ -20,16 +20,21 @@
     width: 100%;
     @include flex($wrap: wrap, $gap: 20px);
     padding: 2rem;
-    @include link;
+    @include mediaQuery(485px) {
+        @include flex($direction: column, $justify: center, $align: center, $wrap: nowrap, $gap: 45px);
+    }
+    * {
+        @include link;
+    }
 
     .link-category {
-
-        @include flex(column, nowrap, center, center);
+        @include flex(column, nowrap, center, center, 10px);
     
         .iconCategory {
             width: 200px;
             height: 200px;
             border-radius:150px;
+            @include borderGreen();
         }
     }
 }
