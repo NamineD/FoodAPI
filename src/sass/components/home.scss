@@ -2,14 +2,19 @@
     @include flex($justify: center);
 }
 
-.recipeRandomHeader {
-    display: flex;
-    justify-content: space-between;
+.recipeRandomContainer {
+    @include flex($direction: column, $justify: center);
 
-    .linkDetail {
-        text-decoration: none;
-        color: $secondary;
-        font-size: 18px;
+    .recipeRandomHeader {
+        @include flex($justify: space-between, $align: baseline);
+        width: 100%;
+        padding: 0.5em;
+    
+        .linkDetail {
+            text-decoration: none;
+            color: $secondary;
+            font-size: 18px;
+        }
+    
     }
-
 }

@@ -1,18 +1,12 @@
 .containerCategory {
-
-    display: flex;
-    flex-wrap: wrap;
-    margin: 20px;
-
+    @include flex($wrap: wrap, $gap: 50px);
+    padding: 1.5rem;
 
     .recipeCategory {
 
-    display: flex;
-    flex-wrap: nowrap;
-    margin: 20px;
+    @include flex($direction: column, $justify: center, $align: center, $gap: 20px);
 
         img {
-            width: 70%;
             height: 30vh;
         }
 
@@ -20,18 +14,24 @@
 }
 
 .containerLinkCategory {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+    width: 100%;
+    @include flex($wrap: wrap, $gap: 20px);
+    padding: 2rem;
+    @include mediaQuery(485px) {
+        @include flex($direction: column, $justify: center, $align: center, $wrap: nowrap, $gap: 45px);
+    }
+    * {
+        @include link;
+    }
 
-.link-category {
-
-    @include flex(column, nowrap, center, center);
-
-    .iconCategory {
-        width: 200px;
-        height: 200px;
-        border-radius:150px;
+    .link-category {
+        @include flex(column, nowrap, center, center, 10px);
+    
+        .iconCategory {
+            width: 200px;
+            height: 200px;
+            border-radius:150px;
+            @include borderGreen();
+        }
     }
 }

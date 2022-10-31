@@ -1,8 +1,6 @@
-
 .custom-footer {
     left:0px;
     bottom:0;
-    position: fixed;
     height:10vh;
     width: 100%;
     @include flex($justify: space-between, $align: center);
