@@ -40,7 +40,6 @@ export function getDetail(id) {
 export function getTypes(categoryName) {
     return async function (dispatch) {
         return axios.get(`${process.env.REACT_APP_FOOD}/filter.php?c=`+categoryName).then((response) => {
-            console.log(response.data.meals);
             dispatch({
                 type: RECIPES_TYPES,
                 payload: response.data.meals
@@ -49,9 +48,10 @@ export function getTypes(categoryName) {
     }
 }
 
-export function getAreas() {
+export function getAreas(areaName) {
     return async function (dispatch) {
-        return axios.get(`${process.env.REACT_APP_FOOD}/list.php?a=list`).then((response) => {
+        return axios.get(`${process.env.REACT_APP_FOOD}/filter.php?a=`+areaName).then((response) => {
+            console.log(response.data.meals);
             dispatch({
                 type: AREA,
                 payload: response.data.meals

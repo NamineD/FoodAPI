@@ -11,6 +11,7 @@ import Header from '../components/Header';
 import Footer from "../components/Footer";
 import Detail from './Detail';
 import CategoryList from '../components/CategoryList';
+import AreaList from '../components/AreaList';
 
 
 const Pages = () => {
@@ -25,7 +26,8 @@ const Pages = () => {
             <Route path='/about-us' element={ <AboutUs /> } />
             <Route path='/categories' element={ <CategoryList /> } />
             <Route path='/categories/:categoryName' element={ <Category /> } />
-            <Route path='/areas' element={ <Area /> } />
+            <Route path='/areas' element={ <AreaList /> } />
+            <Route path='/areas/:areaName' element={ <Area /> } />
             <Route path='/detail/:id' element={ <Detail /> } />
 
             <Route path='*' element={ <Navigate to="/" replace /> } />

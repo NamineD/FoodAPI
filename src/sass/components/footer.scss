@@ -1,7 +1,7 @@
 .custom-footer {
     left:0px;
-    bottom:0;
-    height:10vh;
+    bottom:0px;
+    height:8vh;
     width: 100%;
     @include flex($justify: space-between, $align: center);
     background-color: $tertiary;
@@ -25,7 +25,8 @@
 }
 
 .list-link ul {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    padding: 5px;
 }
 
 .link-custom {
