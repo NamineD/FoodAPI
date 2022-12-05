@@ -1,0 +1,3 @@
+.developers{
+    @include flex($direction: wrap, $justify: space-around, $align: center, $gap: 20px);
+}
