@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="list-link">
             <ul>
                 <li><a href="https://www.themealdb.com/api.php" className='link-custom'>TheMealDB API</a></li>
-                <li><Link to="/about-us" className='link-custom'>Who we are</Link></li>
+                <li><Link to="/developers" className='link-custom'>Developers</Link></li>
             </ul>
         </div>
 

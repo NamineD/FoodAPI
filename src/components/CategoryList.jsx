@@ -1,11 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
-
-import Recipes from "./Recipes";
 
 const CategoryList = () => {
-  const query = useSelector((state) => state.recipeReducer.recipeName);
 
   const ArrCategory = [
     {
@@ -82,20 +78,16 @@ const CategoryList = () => {
 
   return (
     <>
-      {query.length > 1 ? (
-        <Recipes query={query} />
-      ) : (
         <div className="containerLinkCategory">
           {ArrCategory.map((category) => (
             <Link to={`/categories/${category.category}`}>
               <div className="link-category" key={category.id}>
-                <img className="iconCategory" src={category.img} />
+                <img className="iconCategory" src={category.img} alt={category.category}/>
                 <h4>{category.category}</h4>
               </div>
             </Link>
           ))}
         </div>
-      )}
     </>
   );
 };

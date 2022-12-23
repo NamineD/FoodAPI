@@ -40,6 +40,7 @@ export function getDetail(id) {
 export function getTypes(categoryName) {
     return async function (dispatch) {
         return axios.get(`${process.env.REACT_APP_FOOD}/filter.php?c=`+categoryName).then((response) => {
+            console.log(response.data.meals);
             dispatch({
                 type: RECIPES_TYPES,
                 payload: response.data.meals

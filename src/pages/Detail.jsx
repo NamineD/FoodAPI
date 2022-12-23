@@ -19,13 +19,13 @@ const Detail = () => {
     <>
         {recipeDetail.map(recipe => 
             <div className='recipeDetail' key={recipe.idMeal}>
-                <img  src={recipe.strMealThumb}/>
+                <img  src={recipe.strMealThumb} alt={recipe.strMeal}/>
                 <div className='containerDetail'>
                     <h2>{recipe.strMeal}</h2>
                     <h4><span>Area:</span> {recipe.strArea}</h4>
                     <h4><span>Category:</span> {recipe.strCategory}</h4>
                     <p><span>Instructions:</span> {recipe.strInstructions}</p>
-                    <a href={recipe.strYoutube} target="_blank">Recipe Video</a>
+                    <a href={recipe.strYoutube} target="_blank" rel="noreferrer">Recipe Video</a>
                 </div>
             </div>
         )}

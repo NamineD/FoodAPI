@@ -2,9 +2,14 @@ import { Link } from 'react-router-dom'
 import Search from './Search';
 
 
-const Header = () => {
+const Header = ({search, setSearch}) => {
 
-  
+  const handleClick = e => {
+    e.preventDefault()
+
+    localStorage.clear();
+    window.location.href = '/';
+  }
 
   return (
     <>
@@ -19,9 +24,9 @@ const Header = () => {
         
         <Link className="link-nav" to="/categories">Categories</Link>
 
-        <Link className="link-nav" to='/areas'>Area</Link>
+        <Link className="link-nav" to='/areas'>Country</Link>
 
-        <Search />
+        <Search search={search} setSearch={setSearch}/>
 
       </div>
       

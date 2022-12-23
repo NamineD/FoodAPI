@@ -1,3 +1,19 @@
 .developers{
-    @include flex($direction: wrap, $justify: space-around, $align: center, $gap: 20px);
+    @include flex($direction: wrap, $justify: space-around, $align: center);
+
+    span {
+        color: $letters;
+        font-size: 20px;
+    }
+    ul{
+        li{
+            list-style: none;
+            color: $secondary;
+
+            a{
+                text-decoration: none;
+                color: $secondary;
+            }
+        }
+    }
 }

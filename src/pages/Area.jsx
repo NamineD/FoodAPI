@@ -1,38 +1,39 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { getAreas } from "../redux/reducers/recipes/recipes.actions";
 
-import Recipes from "../components/Recipes";
+//components
+import Card from "../components/Card";
+import Spinner from "../components/Spinner";
 
 const Area = () => {
   const { areaName } = useParams();
+  const [ spinner, setSpinner ] = useState(true);
 
-  const query = useSelector((state) => state.recipeReducer.recipeName);
   const areas = useSelector((state) => state.recipeReducer.area);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getAreas(areaName));
+    setTimeout(() => {
+      setSpinner(false)
+      dispatch(getAreas(areaName));
+    }, 500)
   }, [areaName, dispatch]);
 
   return (
     <>
-      {query.length > 1 ? (
-        <Recipes query={query} />
-      ) : (
-        <div className="containerCategory">
-          {areas.map((recipe) => (
-            <div className="recipeCategory" key={recipe.idMeal}>
-              <img src={recipe.strMealThumb} alt={recipe.strMeal} />
-              <h3>{recipe.strMeal}</h3>
-              <Link className="linkDetail" to={"/detail/" + recipe.idMeal}>
-                Read more
-              </Link>
-            </div>
-          ))}
-        </div>
-      )}
+      {spinner ? <Spinner /> :
+          <div className="containerCategory">
+            {areas.map((recipe) => (
+              <Card
+              key={recipe.idMeal}
+              id={recipe.idMeal}
+              image={recipe.strMealThumb}
+              title={recipe.strMeal}/>
+            ))}
+          </div>
+      }
     </>
   );
 };

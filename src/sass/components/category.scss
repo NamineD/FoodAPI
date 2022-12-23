@@ -4,7 +4,7 @@
 
     .recipeCategory {
 
-    @include flex($direction: column, $justify: center, $align: center, $gap: 15px);
+    @include flex($direction: column, $justify: center, $align: center, $gap: 20px);
 
         img {
             height: 30vh;
@@ -28,10 +28,16 @@
         @include flex(column, nowrap, center, center, 10px);
     
         .iconCategory {
+            width: 200px;
+            height: 200px;
+            border-radius:150px;
+            @include borderGreen();
+        }
+
+        .iconArea {
             width: 150px;
             height: 150px;
             border-radius:150px;
-            @include borderGreen();
         }
     }
 }
