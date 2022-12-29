@@ -16,3 +16,11 @@
     border: 15px dashed $letters;
     border-width: 2px;
 }
+
+@mixin navBar($fontSize) {
+    font-size: $fontSize;
+}
+
+@mixin footer(){
+    font-size: 1rem;
+}

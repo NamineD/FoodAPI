@@ -80,8 +80,8 @@ const CategoryList = () => {
     <>
         <div className="containerLinkCategory">
           {ArrCategory.map((category) => (
-            <Link to={`/categories/${category.category}`}>
-              <div className="link-category" key={category.id}>
+            <Link to={`/categories/${category.category}`} key={category.id}>
+              <div className="link-category">
                 <img className="iconCategory" src={category.img} alt={category.category}/>
                 <h4>{category.category}</h4>
               </div>

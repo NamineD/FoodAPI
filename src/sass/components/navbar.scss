@@ -3,17 +3,68 @@
     min-height: 10vh;
     @include flex($justify: space-between, $align: center);
     background-color: $tertiary;
+
+    /* mediaQuery 485 */
+    @include mediaQuery(485px) {
+        @include flex($justify: center, $align: center);
+    }
+
+    /* mediaQuery 412 */
+    @include mediaQuery(412px) {
+        @include flex($justify: center, $align: center);
+        min-height: 14vh;
+    }
+
+    /* mediaQuery 320 */
+    @include mediaQuery(320px) {
+        @include flex($justify: center, $align: center);
+        min-height: 14vh;
+    }
 }
 
 .navbar img {
     margin: 10px;
     height: 7vh;
     width: 7vh;
+
+    /* mediaQuery 485 */
+    @include mediaQuery(485px) {
+        @include navBar($fontSize: 0px);
+        width: 8vw;
+        height: 5vh;
+    }
+
+    /* mediaQuery 412 */
+    @include mediaQuery(412px) {
+        width: 14vw;
+        height: 6vh;
+    }
+
+    /* mediaQuery 320 */
+    @include mediaQuery(320px) {
+        width: 14vw;
+        height: 5vh;
+    }
 }
 
 .link-logo {
     text-decoration: none;
     @include flex($wrap: wrap, $align: center);
+
+    /* mediaQuery 485 */
+    @include mediaQuery(485px) {
+        @include navBar($fontSize: 12px)
+    }
+
+    /* mediaQuery 412 */
+    @include mediaQuery(412px) {
+        @include navBar($fontSize: 8px)
+    }
+
+    /* mediaQuery 320 */
+    @include mediaQuery(320px) {
+        @include navBar($fontSize: 8px)
+    }
 }
 
 .inputs {
@@ -27,19 +78,68 @@
     padding: 10px;
     align-content: center;
     color: $letters;
+
+    /* mediaQuery 485 */
+    @include mediaQuery(485px) {
+        @include navBar($fontSize: 14px)
+    }
+
+    /* mediaQuery 412 */
+    @include mediaQuery(412px) {
+        @include navBar($fontSize: 13px);
+        padding: 3px;
+    }
+
+    /* mediaQuery 320 */
+    @include mediaQuery(320px) {
+        @include navBar($fontSize: 12px);
+        padding: 3px;
+    }
 }
 
 .link-nav:active, .link-nav:hover {
     color: $secondary;
 }
 
-.custom-select, input {
+input {
     margin: 10px;
     align-content: center;
     background-color: $primary;
     padding: 5px;
     border: 4px solid $secondary;
     border-radius: 5px;
+
+    /* mediaQuery 485 */
+    @include mediaQuery(485px) {
+        @include navBar($fontSize: 12px);
+        margin: 5px;
+        border: 3px solid $secondary;
+    }
+
+    /* mediaQuery 412 */
+    @include mediaQuery(412px) {
+        padding: 0px;
+        max-width: 22vw;
+    }
+
+    /* mediaQuery 320 */
+    @include mediaQuery(320px) {
+        padding: 0px;
+        max-width: 18vw;
+    }
+}
+
+form {
+
+    /* mediaQuery 412 */
+    @include mediaQuery(412px) {
+        max-width: 25vw;
+    }
+
+    /* mediaQuery 320 */
+    @include mediaQuery(320px) {
+        max-width: 20vw;
+    }
 }
 
 

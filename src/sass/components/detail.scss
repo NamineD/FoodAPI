@@ -2,18 +2,39 @@
     @include flex();
     margin: 20px;
 
+    /* mediaQuery 320 */
+    @include mediaQuery(320px) {
+        @include flex(column, $justify: center, $align: center);
+    }
+
     img {
         flex: 1/2;
         width: 50%;
         height: 70vh;
+
+        /* mediaQuery 320 */
+        @include mediaQuery(320px) {
+            height: 25vh;
+            width: 63vw;
+        }
     } 
 
     .containerDetail {
         width: 50%;
         @include flex(column, nowrap, center, center);
 
+        /* mediaQuery 320 */
+        @include mediaQuery(320px) {
+            width: 100%;
+        }
+
         h2, h4, p, a {
             margin: 10px;
+
+            /* mediaQuery 320 */
+            @include mediaQuery(320px) {
+                margin: 5px;
+            }
         }
 
         h2, span, a {
@@ -22,6 +43,11 @@
 
         p {
             width: 70%;
+
+            /* mediaQuery 320 */
+            @include mediaQuery(320px) {
+                width: 100%;
+            }
         }
 
         a {

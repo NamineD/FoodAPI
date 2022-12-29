@@ -14,6 +14,26 @@
     h2 {
         font-size: 1.3rem;
         color: $primary;
+
+        /* mediaQuery 640 */
+        @include mediaQuery(640px) {
+            font-size: 15px;
+        }
+
+        /* mediaQuery 485 */
+        @include mediaQuery(485px) {
+            @include footer();
+        }
+
+        /* mediaQuery 412px */
+        @include mediaQuery(412px) {
+            font-size: 13px;
+        }
+
+        /* mediaQuery 320 */
+        @include mediaQuery(320px) {
+            font-size: 13px;
+        }
     }
 
 }
@@ -22,10 +42,43 @@
     font-size: 2rem;
     @include flex($wrap: wrap, $justify: center);
     color: $primary;
+
+    /* mediaQuery 640 */
+    @include mediaQuery(640px) {
+        @include flex($wrap: wrap);
+        font-size: 18px
+    }
+
+    /* mediaQuery 485 */
+    @include mediaQuery(485px) {
+        @include footer();
+        @include flex($wrap: nowrap)
+    }
+
+    /* mediaQuery 320 */
+    @include mediaQuery(320px) {
+        @include flex($wrap: wrap);
+        font-size: 12px
+    }
 }
 
 .list-link ul {
     font-size: 1.5rem;
+
+    /* mediaQuery 640 */
+    @include mediaQuery(640px) {
+        font-size: 16px;
+    }
+
+    /* mediaQuery 485 */
+    @include mediaQuery(485px) {
+        @include footer();
+    }
+
+    /* mediaQuery 320 */
+    @include mediaQuery(320px) {
+        font-size: 13px;
+    }
 }
 
 .link-custom {
