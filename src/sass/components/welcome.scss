@@ -1,0 +1,78 @@
+.container-welcome {
+    @include flex($direction: nowrap, $justify: center, $align: center);
+
+    /* mediaQuery 640 */
+    @include mediaQuery(640px) {
+        @include flex($direction: column, $justify: center, $align: center);
+    }
+
+    /* mediaQuery 412 */
+     @include mediaQuery(412px) {
+        @include flex($direction: column, $justify: center, $align: center);
+    }
+
+    /* mediaQuery 320 */
+    @include mediaQuery(320px) {
+        @include flex($direction: column, $justify: center, $align: center);
+    }
+
+    img {
+        height: 100vh;
+        width: 70%;
+
+        /* mediaQuery 640 */
+        @include mediaQuery(640px) {
+            height: 60vh;
+            width: 100%;
+        }
+
+        /* mediaQuery 412 */
+        @include mediaQuery(412px) {
+            height: 40vh;
+            width: 100%;
+        }
+
+        /* mediaQuery 320 */
+        @include mediaQuery(320px) {
+            height: 40vh;
+            width: 100%;
+        }
+    }
+
+    .section-welcome {
+        width: 40%;
+        @include flex($direction: column, $justify: center, $align: center);
+        font-size: 30px;
+
+        /* mediaQuery 320 */
+        @include mediaQuery(320px) {
+            font-size: 23px;
+        }
+
+        button {
+            display:inline-block;
+            padding:0.3em 1.2em;
+            margin:0 0.3em 0.3em 0;
+            border-radius:2em;
+            box-sizing: border-box;
+            text-decoration:none;
+            font-weight:300;
+            font-size: 20px;
+            color: $primary;
+            background-color: $secondary;
+            text-align:center;
+            transition: all 0.2s;
+        }
+
+        button:hover {
+            background-color: $tertiary;
+        }
+
+        @media all and (max-width:30em){
+                button{
+                    display:block;
+                    margin:0.2em auto;
+                }
+            }
+    }
+}

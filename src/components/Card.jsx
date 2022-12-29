@@ -7,7 +7,7 @@ const Card = ({id, image, title}) => {
         <li className="card">
             <img src={image} alt='recipeImage' />
             <h3>{title}</h3>
-            <Link to={"/detail/"+id}>Mas info</Link>
+            <Link className='linkDetail' to={"/detail/"+id}>Read more</Link>
         </li>
     </ul>
   )

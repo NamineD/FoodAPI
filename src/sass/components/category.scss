@@ -5,11 +5,27 @@
     .recipeCategory {
 
     @include flex($direction: column, $justify: center, $align: center, $gap: 20px);
-
         img {
             height: 30vh;
+            
         }
+    }
 
+    /* mediaQuery 412 */
+    @include mediaQuery(412px) {
+        @include flex($wrap: wrap, $gap: 15px);
+        img {
+            height: 16vh;
+            width: 100%;
+        }
+    } 
+
+    /* mediaQuery 320 */
+    @include mediaQuery(320px) {
+        @include flex($wrap: wrap, $gap: 15px);
+        img {
+            height: 15vh;
+        }
     }
 }
 
@@ -17,11 +33,26 @@
     width: 100%;
     @include flex($wrap: wrap, $gap: 20px);
     padding: 2rem;
+
+    /* mediaQuery 485 */
     @include mediaQuery(485px) {
         @include flex($direction: column, $justify: center, $align: center, $wrap: nowrap, $gap: 45px);
     }
+
     * {
         @include link;
+    }
+
+    /* mediaQuery 412 */
+    @include mediaQuery(412px) {
+        @include flex($wrap: wrap, $gap: 5px);
+        padding: 1rem;
+    }
+
+    /* mediaQuery 320 */
+    @include mediaQuery(320px) {
+        @include flex($wrap: wrap, $gap: 15px);
+        padding: 1rem;
     }
 
     .link-category {
@@ -32,6 +63,42 @@
             height: 200px;
             border-radius:150px;
             @include borderGreen();
+
+            /* mediaQuery 640 */
+            @include mediaQuery(640px) {
+                height: 20vh;
+                width: 24vw;
+            }
+
+            /* mediaQuery 412 */
+            @include mediaQuery(412px) {
+                height: 10vh;
+                width: 24vw;
+            }
+
+            /* mediaQuery 320 */
+            @include mediaQuery(320px) {
+                height: 10vh;
+                width: 20vw;
+            }
+        }
+
+        .iconArea {
+            width: 150px;
+            height: 150px;
+            border-radius:150px;
+
+            /* mediaQuery 412 */
+            @include mediaQuery(412px) {
+                width: 80px;
+                height: 80px;
+            }
+
+            /* mediaQuery 320 */
+            @include mediaQuery(320px) {
+                width: 70px;
+                height: 70px;
+            }
         }
     }
 }

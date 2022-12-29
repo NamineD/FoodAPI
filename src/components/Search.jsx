@@ -1,14 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useDispatch } from "react-redux";
 import { getByName } from "../redux/reducers/recipes/recipes.actions";
 
 
 
-const Search = ({}) => {
+const Search = ({search, setSearch}) => {
 
-    const [search, setSearch ] = useState(' ')
     const dispatch = useDispatch();
-
 
     const handleFilter = (e) => {
         e.preventDefault();
@@ -22,6 +20,7 @@ const Search = ({}) => {
         dispatch(getByName(search))
         setSearch("");
     }
+
 
   return (
     <>

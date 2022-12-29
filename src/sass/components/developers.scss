@@ -1,0 +1,29 @@
+.developers{
+    @include flex($direction: wrap, $justify: space-around, $align: center);
+
+    /* mediaQuery 320 */
+    @include mediaQuery(320px) {
+        @include flex($direction: column, $justify: center, $align: center);
+        margin: 10px;
+    }
+
+    span {
+        color: $letters;
+        font-size: 20px;
+    }
+    ul{
+        li{
+            list-style: none;
+            color: $secondary;
+
+            @include mediaQuery(320px) {
+                margin: 7px;
+            }
+
+            a{
+                text-decoration: none;
+                color: $secondary;
+            }
+        }
+    }
+}

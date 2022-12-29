@@ -1,28 +1,39 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import Card from "../components/Card";
+import Spinner from "../components/Spinner";
 import { getTypes } from "../redux/reducers/recipes/recipes.actions";
 
 const Category = () => {
   const { categoryName } = useParams();
+  const [ spinner, setSpinner ] = useState(true);
 
   const categories = useSelector((state) => state.recipeReducer.categories);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getTypes(categoryName));
+    setTimeout(() => {
+      setSpinner(false)
+      dispatch(getTypes(categoryName));
+    }, 500)
   }, [categoryName, dispatch]);
 
   return (
     <>
-      <div className="containerCategory">
-        {categories.map((recipe) => (
-          <div className="recipeCategory" key={recipe.idMeal}>
-            <img src={recipe.strMealThumb} />
-            <h3>{recipe.strMeal}</h3>
-          </div>
-        ))}
-      </div>
+      {spinner ? <Spinner /> :
+        <div className="containerCategory">
+            {categories.map((recipe) => (
+                <Card
+                key={recipe.idMeal}
+                id={recipe.idMeal}
+                image={recipe.strMealThumb}
+                title={recipe.strMeal}/>
+            ))}
+          
+        </div>
+      }
     </>
   );
 };
