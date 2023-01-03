@@ -4,13 +4,6 @@ import Search from './Search';
 
 const Header = ({search, setSearch}) => {
 
-  const handleClick = e => {
-    e.preventDefault()
-
-    localStorage.clear();
-    window.location.href = '/';
-  }
-
   return (
     <>
     <nav className='navbar'>
