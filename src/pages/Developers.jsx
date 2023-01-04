@@ -17,67 +17,76 @@ const Developers = () => {
       {spinner ? (
         <Spinner />
       ) : (
-        <div className="developers">
-          <div>
-            <h2>Melina Mamaní</h2>
-            <span>Frontend Developer</span>
-            <ul>
+        <div className="container">
+    
+          <div className="card-wrapper">
+            
+            <div className="card">
+              
+              <div className="card-image">
+                <img src="https://www.paulinacocina.net/wp-content/uploads/2021/12/Ramen-receta.jpg" alt="profile one" />
+              </div>
+      
+            <ul className="social-icons">
               <li>
-                <a
-                  href="https://www.linkedin.com/in/erika-lidia-melina-mamani/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  LinkedIn
+                <a href="https://www.linkedin.com/in/daiana-e-gimenez/">
+                  <i className="fab fa-linkedin"></i>
                 </a>
               </li>
               <li>
-                <a
-                  href="https://github.com/MelinaMamani"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  GitHub
+                <a href="https://github.com/NamineD">
+                  <i className="fab fa-github"></i>
                 </a>
               </li>
-              <li>Email: erikamelinamamani@gmail.com</li>
+              <li>
+                <a href="https://namined.github.io/">
+                  <i className="fa fa-external-link"></i>
+                </a>
+              </li>
             </ul>
+      
+            <div className="details">
+              <h2>Daiana Elizabeth Gimenez
+                <br/>
+                <span className="job-title">Frontend Developer</span>
+                <br />
+                <span className="job-title">Email: Namined09@gmail.com</span>
+              </h2>
+            </div>
           </div>
+        </div>
 
-          <div>
-            <h2>Daiana Elizabeth Gimenez</h2>
-            <span>Frontend Developer</span>
-            <ul>
+        <div className="card-wrapper">
+            
+            <div className="card">
+              
+              <div className="card-image">
+                <img src="https://t1.rg.ltmcdn.com/es/posts/6/3/0/costillar_de_cerdo_a_la_parrilla_38036_orig.jpg" alt="profile one" />
+              </div>
+      
+              <ul className="social-icons">
               <li>
-                <a
-                  href="https://www.linkedin.com/in/daiana-e-gimenez/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  LinkedIn
+                <a href="https://www.linkedin.com/in/erika-lidia-melina-mamani/">
+                  <i className="fab fa-linkedin"></i>
                 </a>
               </li>
               <li>
-                <a
-                  href="https://github.com/NamineD"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  GitHub
+                <a href="https://github.com/MelinaMamani">
+                  <i className="fab fa-github"></i>
                 </a>
               </li>
-              <li>
-                <a
-                  href="https://namined.github.io/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Portfolio
-                </a>
-              </li>
-              <li>Email: namined09@gmail.com</li>
             </ul>
+      
+            <div className="details">
+              <h2>Melina Mamaní
+                <br/>
+                <span className="job-title">Frontend Developer</span>
+                <br />
+                <span className="job-title">Email: erikamelinamamani@gmail.com</span>
+              </h2>
+            </div>
           </div>
+        </div>
         </div>
       )}
     </>
