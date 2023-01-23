@@ -1,42 +1,40 @@
-/* .developers{
-    @include flex($direction: wrap, $justify: space-around, $align: center);
-    @include mediaQuery(320px) {
-        @include flex($direction: column, $justify: center, $align: center);
-        margin: 10px;
-    }
-
-    span {
-        color: $letters;
-        font-size: 20px;
-    }
-    ul{
-        li{
-            list-style: none;
-            color: $secondary;
-
-            @include mediaQuery(320px) {
-                margin: 7px;
-            }
-
-            a{
-                text-decoration: none;
-                color: $secondary;
-            }
-        }
-    }
-} */
-
 .container {
     max-width: 900px;
     display: flex;
     justify-content: space-evenly;
     margin: 0 auto;
+
+    @include mediaQuery(800px) {
+      max-width: 700px;
+      margin: 5px;
+    }
+
+    @include mediaQuery(412px) {
+      @include flex(column);
+    } 
+
+    @include mediaQuery(320px) {
+      @include flex(column);
+    } 
   }
   
   .card-wrapper {
     width: 400px;
     height: 500px;
     position: relative;
+
+    /* mediaQuery 412 */
+    @include mediaQuery(412px) {
+      width: 370px;
+      height: 450px;
+    } 
+
+    /* mediaQuery 320 */
+    @include mediaQuery(320px) {
+      width: 300px;
+      height: 350px;
+    }
+
   }
   
   .card {
@@ -51,6 +49,24 @@
     box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
     cursor: pointer;
     transition: 0.5s;
+
+    /* mediaQuery 800 */
+    @include mediaQuery(800px) {
+      width: 250px;
+      height: 350px;
+    }
+
+    /* mediaQuery 412 */
+    @include mediaQuery(412px) {
+      width: 250px;
+      height: 350px;
+    } 
+
+    /* mediaQuery 320 */
+    @include mediaQuery(320px) {
+      width: 200px;
+      height: 300px;
+    }
     
     .card-image {
       position: absolute;
